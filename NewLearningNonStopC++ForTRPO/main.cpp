@@ -42,10 +42,14 @@ void main()
 	cout << "\n";
 	} */
 	Stack<Person> firstStack(1);
-	//firstStack.RandFilling();
-	PersonKeeper a;
-	a.readPersons(firstStack);
-	a.writePersons(firstStack);
+
+    //Stack<int> thirdStack(1);
+	//Stack<int> secondStack(1);
+	//secondStack.Push(1);
+	//Stack<int> thirdStack(secondStack);
+	PersonKeeper::instance().readPersons(firstStack);
+	
+	PersonKeeper::instance().writePersons(firstStack);
 	firstStack.Output();
 	
 	/*try {

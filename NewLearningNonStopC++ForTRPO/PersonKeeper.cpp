@@ -51,7 +51,16 @@ public:
 class PersonKeeper
 {
 private:
+	PersonKeeper() {
+	}
+
+
 public:
+	static PersonKeeper &instance()
+	{
+		static PersonKeeper res;
+		return res;
+	}
 	void readPersons(Stack<Person>& stack) {
 		ifstream fin;
 		fin.open("C:\\101\\myfile.txt", ifstream::app);
@@ -66,14 +75,14 @@ public:
 
 
 
-		/*до пробела записываем имя в пёрсон нейм, потом после пробела фамилию до пробела
-		 потом отчество помещаем готовый объект класса пёрсон в класс стек*/
+
 	void writePersons(Stack<Person>& stack) {
 		ofstream fout;
 		fout.open("C:\\101\\infile.txt", ofstream::app);
-		for (int i = 0; stack.getDimension(); i++) {
+		Stack<Person> a(stack);
+		for (int i = 0; a.getDimension(); i++) {
 			cout << i;
-			fout << stack.Pop() << endl;
+			fout << a.Pop() << endl;
 		}
 		fout.close();
 

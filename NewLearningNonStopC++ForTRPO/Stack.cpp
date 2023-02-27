@@ -15,6 +15,9 @@ public:
 		arr = new T[_maxSize];
 		_size = 0;
 	}
+	~Stack() {
+		delete[]arr;
+	}
 
 public: void Output()
 {
@@ -54,10 +57,20 @@ public: void Output()
 	  {
 		  return (_size);
 	  }
-	  void extensionOfArray(int extension)
+	  Stack(const Stack<T>& arg)
+	  {		
+		_maxSize = arg._maxSize;
+		_size = arg._size;
+		  arr = new T[_maxSize];
+		  for (int i = 0; i < _maxSize; i++)
+		  {
+			  arr[i] = arg.arr[i];
+		  }
+	  }
+	  void extensionOfArray(int extension	)
 	  {
 		  T* arr2;
-		  /* arr2 = new int[_maxSize];
+		  /* arr2 = new int[_maxSiz	e];
 		   for (int i = 0; i < _maxSize; i++)
 		   {
 			   arr2[i] = arr[i];
