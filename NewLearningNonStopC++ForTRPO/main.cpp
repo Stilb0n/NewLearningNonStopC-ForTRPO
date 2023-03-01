@@ -50,7 +50,12 @@ void main()
 	PersonKeeper::instance().readPersons(firstStack);
 	
 	PersonKeeper::instance().writePersons(firstStack);
-	firstStack.Output();
+	PersonKeeper a = PersonKeeper::instance();
+	PersonKeeper b = PersonKeeper::instance();
+	a.val = a.val * 8;
+	cout << " ";
+	cout << b.val << a.val;
+	//firstStack.Output();
 	
 	/*try {
 		firstStack.Pop();

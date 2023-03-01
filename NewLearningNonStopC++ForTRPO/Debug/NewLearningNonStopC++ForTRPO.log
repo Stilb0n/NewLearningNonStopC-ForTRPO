@@ -1,5 +1,3 @@
-﻿  PersonKeeper.cpp
-  main.cpp
-C:\Users\User\Desktop\NewLearningNonStopC++ForTRPO\NewLearningNonStopC++ForTRPO\main.cpp(21,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-  Создание кода...
-  NewLearningNonStopC++ForTRPO.vcxproj -> C:\Users\User\Desktop\NewLearningNonStopC++ForTRPO\Debug\NewLearningNonStopC++ForTRPO.exe
+﻿  main.cpp
+C:\Users\User\Desktop\NewLearningNonStopC-ForTRPO\NewLearningNonStopC++ForTRPO\main.cpp(21,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  NewLearningNonStopC++ForTRPO.vcxproj -> C:\Users\User\Desktop\NewLearningNonStopC-ForTRPO\Debug\NewLearningNonStopC++ForTRPO.exe

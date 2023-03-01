@@ -53,9 +53,10 @@ class PersonKeeper
 private:
 	PersonKeeper() {
 	}
-
+	
 
 public:
+	int val = 1;
 	static PersonKeeper &instance()
 	{
 		static PersonKeeper res;
