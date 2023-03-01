@@ -51,16 +51,25 @@ public:
 class PersonKeeper
 {
 private:
+	
 	PersonKeeper() {
 	}
-
-
+	static PersonKeeper* _instance;
 public:
-	static PersonKeeper &instance()
+	int aaa = 1;
+	static PersonKeeper *instance()
 	{
-		static PersonKeeper res;
-		return res;
+		if (_instance == nullptr) {
+			_instance = new PersonKeeper;
+			return _instance;
 	}
+		else {
+			return nullptr;
+		}
+	//	static PersonKeeper res;
+		//return res;
+	}
+	//PersonKeeper* _instance = nullptr;
 	void readPersons(Stack<Person>& stack) {
 		ifstream fin;
 		fin.open("C:\\101\\myfile.txt", ifstream::app);

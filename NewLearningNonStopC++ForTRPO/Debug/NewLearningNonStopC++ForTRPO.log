@@ -1,5 +1,6 @@
 ﻿  PersonKeeper.cpp
   main.cpp
-C:\Users\User\Desktop\NewLearningNonStopC++ForTRPO\NewLearningNonStopC++ForTRPO\main.cpp(21,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\User\Desktop\NewLearningNonStopC++ForTRPO\NewLearningNonStopC++ForTRPO\main.cpp(20,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
   Создание кода...
-  NewLearningNonStopC++ForTRPO.vcxproj -> C:\Users\User\Desktop\NewLearningNonStopC++ForTRPO\Debug\NewLearningNonStopC++ForTRPO.exe
+main.obj : error LNK2001: неразрешенный внешний символ "private: static class PersonKeeper * PersonKeeper::_instance" (?_instance@PersonKeeper@@0PAV1@A).
+C:\Users\User\Desktop\NewLearningNonStopC++ForTRPO\Debug\NewLearningNonStopC++ForTRPO.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

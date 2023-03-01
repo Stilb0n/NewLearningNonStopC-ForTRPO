@@ -1,5 +1,4 @@
 #include<iostream>
-
 #include"PersonKeeper.cpp"
 
 using namespace std;
@@ -47,9 +46,19 @@ void main()
 	//Stack<int> secondStack(1);
 	//secondStack.Push(1);
 	//Stack<int> thirdStack(secondStack);
-	PersonKeeper::instance().readPersons(firstStack);
+	PersonKeeper* obj1 = PersonKeeper::instance();
+		PersonKeeper * obj2 = PersonKeeper::instance();
+ //PersonKeeper::instance()->PersonKeeper b;
+	//PersonKeeper::instance()->readPersons(firstStack);
 	
-	PersonKeeper::instance().writePersons(firstStack);
+	//PersonKeeper::instance().writePersons(firstStack);
+	
+
+		obj1->aaa = 3*9;
+		obj2->aaa = obj2->aaa * 8;
+	cout << obj2->aaa;
+
+
 	firstStack.Output();
 	
 	/*try {
