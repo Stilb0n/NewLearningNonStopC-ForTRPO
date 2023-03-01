@@ -32,14 +32,14 @@ public:
 	{
 		name = "a";
 		surname = "a";
-		patronomic = "a"; 
+		patronomic = "a";
 	}
 	Person(string name, string surname, string patronomic)
 	{
 		this->name = name;
 		this->surname = surname;
 		this->patronomic = patronomic;
-	} 
+	}
 	friend ostream& operator<<(ostream& os, const Person& person)
 	{
 		os << person.name << " " << person.surname << " " << person.surname;
@@ -47,21 +47,27 @@ public:
 	} */
 };
 
- 
+
 class PersonKeeper
 {
-private:
-	PersonKeeper() {
-	}
-	
-
+private:static PersonKeeper* p_instance;
+	PersonKeeper() {}
+	PersonKeeper(const PersonKeeper&);
+	PersonKeeper& operator=(PersonKeeper&);
 public:
 	int val = 1;
-	static PersonKeeper &instance()
+	int aaa = 1;
+	static PersonKeeper* instance()
 	{
-		static PersonKeeper res;
-		return res;
-	}
+		if (!p_instance)
+			p_instance = new PersonKeeper();
+		return p_instance;
+	};
+
+
+		//	static PersonKeeper res;
+			//return res;
+	//PersonKeeper* _instance = nullptr;
 	void readPersons(Stack<Person>& stack) {
 		ifstream fin;
 		fin.open("C:\\101\\myfile.txt", ifstream::app);
